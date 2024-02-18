@@ -25,6 +25,9 @@
     <title>Bus Tickets</title>
 
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
       .raleway-font {
         font-family: "Raleway", sans-serif;
       }
@@ -114,9 +117,11 @@
               the app. <br />
               The integrated testing features allow for a streamlined .
             </p>
-            <button class="btn font-bold border-0 text-xl bg-[#1DD100]">
-              Buy Ticket
-            </button>
+            <a href="#Paribahan" class="mt-10 block">
+              <button class="btn font-bold border-0 text-xl bg-[#1DD100]">
+                Buy Ticket
+              </button>
+            </a>
           </div>
         </section>
         <section class="mb-11 flex justify-center gap-10 -mt-5">
@@ -187,7 +192,7 @@
         </div>
       </section>
       <!-- ph Poribahan part  -->
-      <section class="bg-[#F7F8F8] rounded-t-3xl border-t-8 p-6">
+      <section id="Paribahan" class="bg-[#F7F8F8] rounded-t-3xl border-t-8 p-6">
         <div class="text-center py-10 space-y-2">
           <h2 class="font-bold text-4xl">P.H Paribahan</h2>
           <p class="text-xl w-[70%] m-auto">
@@ -209,7 +214,10 @@
               </div>
               <div>
                 <button class="btn bg-[#1DD100] text-lg text-white">
-                  <img src="images/seat-gray.png" alt="" />40 seat left
+                  <img src="images/seat-gray.png" alt="" /><span id="totalSeats"
+                    >40</span
+                  >
+                  seat left
                 </button>
               </div>
             </div>
@@ -260,7 +268,7 @@
               </h2>
             </div>
             <!-- all seats  -->
-            <div class="">
+            <div class="w-7/12">
               <div class="text-right mb-5">
                 <button class="btn">
                   <img src="images/bus-icon.png" alt="" />
@@ -270,6 +278,7 @@
                 <div class="flex flex-col gap-7 gap-y-6">
                   <h4 class="px-5 py-3 rounded-lg font-medium">A</h4>
                   <h4 class="px-5 py-3 rounded-lg font-medium">B</h4>
+                  <h4 class="px-5 py-3 rounded-lg font-medium">C</h4>
                   <h4 class="px-5 py-3 rounded-lg font-medium">D</h4>
                   <h4 class="px-5 py-3 rounded-lg font-medium">E</h4>
                   <h4 class="px-5 py-3 rounded-lg font-medium">F</h4>
@@ -277,52 +286,51 @@
                   <h4 class="px-5 py-3 rounded-lg font-medium">H</h4>
                   <h4 class="px-5 py-3 rounded-lg font-medium">I</h4>
                   <h4 class="px-5 py-3 rounded-lg font-medium">J</h4>
-                  <h4 class="px-5 py-3 rounded-lg font-medium">K</h4>
                 </div>
                 <div class="flex gap-10 w-full justify-between">
                   <div class="grid gap-6 h-6 grid-cols-2">
-                    <button class="btn">A1</button>
-                    <button class="btn">A2</button>
-                    <button class="btn">A3</button>
-                    <button class="btn">A1</button>
-                    <button class="btn">A1</button>
-                    <button class="btn">A2</button>
-                    <button class="btn">A3</button>
-                    <button class="btn">A1</button>
-                    <button class="btn">A1</button>
-                    <button class="btn">A2</button>
-                    <button class="btn">A3</button>
-                    <button class="btn">A1</button>
-                    <button class="btn">A1</button>
-                    <button class="btn">A2</button>
-                    <button class="btn">A3</button>
-                    <button class="btn">A1</button>
-                    <button class="btn">A1</button>
-                    <button class="btn">A2</button>
-                    <button class="btn">A3</button>
-                    <button class="btn">A1</button>
+                    <button class="btn seats" value="A1">A1</button>
+                    <button class="btn seats" value="A2">A2</button>
+                    <button class="btn seats" value="B1">B1</button>
+                    <button class="btn seats" value="B2">B2</button>
+                    <button class="btn seats" value="C1">C1</button>
+                    <button class="btn seats" value="C2">C2</button>
+                    <button class="btn seats" value="D1">D1</button>
+                    <button class="btn seats" value="D2">D2</button>
+                    <button class="btn seats" value="E1">E1</button>
+                    <button class="btn seats" value="E2">E2</button>
+                    <button class="btn seats" value="F1">F1</button>
+                    <button class="btn seats" value="F2">F2</button>
+                    <button class="btn seats" value="G1">G1</button>
+                    <button class="btn seats" value="G2">G2</button>
+                    <button class="btn seats" value="H1">H1</button>
+                    <button class="btn seats" value="H2">H2</button>
+                    <button class="btn seats" value="I1">I1</button>
+                    <button class="btn seats" value="I1">I1</button>
+                    <button class="btn seats" value="J1">J1</button>
+                    <button class="btn seats" value="J2">J2</button>
                   </div>
                   <div class="grid gap-6 h-6 grid-cols-2">
-                    <button class="btn">A1</button>
-                    <button class="btn">A2</button>
-                    <button class="btn">A3</button>
-                    <button class="btn">A1</button>
-                    <button class="btn">A1</button>
-                    <button class="btn">A2</button>
-                    <button class="btn">A3</button>
-                    <button class="btn">A1</button>
-                    <button class="btn">A1</button>
-                    <button class="btn">A2</button>
-                    <button class="btn">A3</button>
-                    <button class="btn">A1</button>
-                    <button class="btn">A1</button>
-                    <button class="btn">A2</button>
-                    <button class="btn">A3</button>
-                    <button class="btn">A1</button>
-                    <button class="btn">A1</button>
-                    <button class="btn">A2</button>
-                    <button class="btn">A3</button>
-                    <button class="btn">A1</button>
+                    <button class="btn seats" value="A3">A3</button>
+                    <button class="btn seats" value="A4">A4</button>
+                    <button class="btn seats" value="B3">B3</button>
+                    <button class="btn seats" value="B4">B4</button>
+                    <button class="btn seats" value="C3">C3</button>
+                    <button class="btn seats" value="C4">C4</button>
+                    <button class="btn seats" value="D3">D3</button>
+                    <button class="btn seats" value="D4">D4</button>
+                    <button class="btn seats" value="E3">E3</button>
+                    <button class="btn seats" value="E4">E4</button>
+                    <button class="btn seats" value="F3">F3</button>
+                    <button class="btn seats" value="F4">F4</button>
+                    <button class="btn seats" value="G3">G3</button>
+                    <button class="btn seats" value="G4">G4</button>
+                    <button class="btn seats" value="H3">H3</button>
+                    <button class="btn seats" value="H4">H4</button>
+                    <button class="btn seats" value="I3">I3</button>
+                    <button class="btn seats" value="I4">I4</button>
+                    <button class="btn seats" value="J3">J3</button>
+                    <button class="btn seats" value="J4">J4</button>
                   </div>
                 </div>
               </div>
@@ -330,12 +338,14 @@
           </div>
           <div class="bg-white rounded-2xl p-10 w-1/3">
             <h2 class="text-2xl font-extrabold text-black">Select Your Seat</h2>
-            <div class="bg-slate-100 p-6 rounded-xl">
+            <div class="bg-slate-100 p-6 rounded-xl mt-5">
               <div
                 class="flex justify-between items-center font-medium border-b-2 pb-4"
               >
                 <h2 class="w-1/4">
-                  Seat<span class="badge bg-lime-500 text-white">0</span>
+                  Seat<span class="badge bg-lime-500 text-white" id="seatCount"
+                    >0</span
+                  >
                 </h2>
                 <h3 class="w-1/4">Class</h3>
                 <h3 class="w-1/4">Price</h3>
@@ -343,18 +353,28 @@
               <div
                 class="flex justify-between items-center font-medium border-b-2 pb-4"
               >
-                <table class="table">
-                  <tr class="p-0">
-                    <td class="w-1/4 font-bold text-[16px]">AC</td>
-                    <td class="w-1/4 font-bold text-[16px]">AC</td>
-                    <td class="w-1/4 font-bold text-[16px]">AC</td>
-                  </tr>
-                </table>
+                <table
+                  class="table text-[16px] font-bold"
+                  id="ticketInfo"
+                ></table>
+              </div>
+              <div class="flex justify-between items-center font-bold mt-2">
+                <h2>Total</h2>
+                <h2>BDT 1100</h2>
+              </div>
+              <div class="bg-white rounded-lg flex justify-between mt-5">
+                <input type="text" class="outline-none indent-3 font-bold" />
+                <button class="btn bg-lime-500 text-white">Apply</button>
+              </div>
+              <div class="flex justify-between items-center font-bold mt-5">
+                <h2>Grand Total</h2>
+                <h2>BDT 1100</h2>
               </div>
             </div>
           </div>
         </div>
       </section>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
