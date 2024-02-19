@@ -1,13 +1,8 @@
 const seats= document.querySelectorAll('.seats');
-// const totalSeats= document.getElementById('totalSeats');
-// totalSeats.innerText=seats.length;
-
-
 const seatsName=[]
 seats.forEach((e)=>{
  e.addEventListener('click',(e)=>{
   if(seatsName.length < 4){
-    // if(seatsName.includes('C2')){}
     seatsName.push(e.target.value);
     e.target.style.backgroundColor="lime";
     document.getElementById('seatCount').innerText=seatsName.length;
@@ -45,9 +40,12 @@ document.getElementById('totalSeats').innerText=total;
 }
 let price=0;
 function increasePrice(arrval){
-    price=price+550;
+  console.log(arrval)
+    if(arrval >0){
+      price=price+550;
     document.getElementById('totalPrice').innerText=price;
     document.getElementById('grandPrice').innerText=price;
+    }
     return price;
 }
 
@@ -88,4 +86,9 @@ document.getElementById('inputBox').addEventListener('keyup',(e)=>{
 document.getElementById('nextbtn').addEventListener('click',()=>{
 this.event.preventDefault();  
 })
+document.getElementById('Continue').addEventListener('click',()=>{
+window.location.reload(); 
+})
+
+
 
