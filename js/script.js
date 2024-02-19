@@ -7,6 +7,7 @@ const seatsName=[]
 seats.forEach((e)=>{
  e.addEventListener('click',(e)=>{
   if(seatsName.length < 4){
+    // if(seatsName.includes('C2')){}
     seatsName.push(e.target.value);
     e.target.style.backgroundColor="lime";
     document.getElementById('seatCount').innerText=seatsName.length;
@@ -42,7 +43,32 @@ let total= totalSeat.innerText= decrSeat;
 document.getElementById('totalSeats').innerText=total;
 // console.log(total);
 }
-
+let price=0;
 function increasePrice(arrval){
-    console.log(arrval)
+    price=price+550;
+    document.getElementById('totalPrice').innerText=price;
+    document.getElementById('grandPrice').innerText=price;
+    return price;
 }
+
+// coupon code functionlatiy
+
+
+document.getElementById('inputBox').addEventListener('keyup',(e)=>{
+  const couponCode=e.target.value.toUpperCase()
+  if(couponCode==='NEW15'){
+    document.getElementById('coupnBtn').removeAttribute('disabled');
+    document.getElementById('coupnBtn').addEventListener('click',()=>{
+     const grandPrice= document.getElementById('grandPrice').innerText;
+      const amount= parseInt(grandPrice);
+      console.log(amount);
+      const dis=15/100*amount;
+      const payAmount= amount-dis;
+      document.getElementById('grandPrice').innerText=payAmount;
+      console.log(payAmount);
+    })
+  }else{
+    document.getElementById('coupnBtn').setAttribute('disabled',true);
+  }
+})
+

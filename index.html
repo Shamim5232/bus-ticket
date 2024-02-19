@@ -360,15 +360,25 @@
               </div>
               <div class="flex justify-between items-center font-bold mt-2">
                 <h2>Total</h2>
-                <h2>BDT 1100</h2>
+                <h2>BDT <span id="totalPrice"></span></h2>
               </div>
               <div class="bg-white rounded-lg flex justify-between mt-5">
-                <input type="text" class="outline-none indent-3 font-bold" />
-                <button class="btn bg-lime-500 text-white">Apply</button>
+                <input
+                  type="text"
+                  id="inputBox"
+                  class="outline-none indent-3 font-bold"
+                />
+                <button
+                  disabled
+                  class="btn bg-lime-500 text-white"
+                  id="coupnBtn"
+                >
+                  Apply
+                </button>
               </div>
               <div class="flex justify-between items-center font-bold mt-5">
                 <h2>Grand Total</h2>
-                <h2>BDT 1100</h2>
+                <h2>BDT <span id="grandPrice"></span></h2>
               </div>
             </div>
           </div>
