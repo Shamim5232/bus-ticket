@@ -89,6 +89,3 @@ this.event.preventDefault();
 document.getElementById('Continue').addEventListener('click',()=>{
 window.location.reload(); 
 })
-
-
-
