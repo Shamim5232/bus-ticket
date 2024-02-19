@@ -65,10 +65,27 @@ document.getElementById('inputBox').addEventListener('keyup',(e)=>{
       const dis=15/100*amount;
       const payAmount= amount-dis;
       document.getElementById('grandPrice').innerText=payAmount;
-      console.log(payAmount);
+      document.getElementById('inputField').style.display='none';
     })
-  }else{
+  }else if(couponCode==='COUPLE 20'){
+    document.getElementById('coupnBtn').removeAttribute('disabled');
+    document.getElementById('coupnBtn').addEventListener('click',()=>{
+     const grandPrice= document.getElementById('grandPrice').innerText;
+      const amount= parseInt(grandPrice);
+      console.log(amount);
+      const dis=20/100*amount;
+      const payAmount= amount-dis;
+      document.getElementById('grandPrice').innerText=payAmount;
+      document.getElementById('inputField').style.display='none';
+    })
+  }
+  else{
     document.getElementById('coupnBtn').setAttribute('disabled',true);
   }
+  
+})
+
+document.getElementById('nextbtn').addEventListener('click',()=>{
+this.event.preventDefault();  
 })
 
