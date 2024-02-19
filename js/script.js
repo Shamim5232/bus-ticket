@@ -89,3 +89,14 @@ this.event.preventDefault();
 document.getElementById('Continue').addEventListener('click',()=>{
 window.location.reload(); 
 })
+
+
+document.getElementById('phone').addEventListener('keyup',(e)=>{
+  const num=parseInt(e.target.value);
+  if(num){
+    document.getElementById('nextbtn').removeAttribute('disabled');
+  }else {
+    document.getElementById('nextbtn').setAttribute('disabled',true);
+  }
+ 
+});
